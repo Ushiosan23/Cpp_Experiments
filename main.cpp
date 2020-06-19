@@ -23,8 +23,9 @@ TCHAR *getSystemName() {
 unsigned long getSystemLengthCores() {
 	SYSTEM_INFO sysInfo;
 	GetSystemInfo(&sysInfo);
-
-//	return std::thread::hardware_concurrency();
+	
+	// using thread library
+	//	return std::thread::hardware_concurrency();
 	return sysInfo.dwNumberOfProcessors;
 }
 
